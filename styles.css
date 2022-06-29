@@ -166,8 +166,8 @@ body {
 .about {
   display: flex;
   justify-content: space-between;
-  padding: 64px 5%;
-  min-height: 100vh;
+  padding: 100px 5%;
+  height: 100%;
 }
 
 .mouse {
