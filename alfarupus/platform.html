@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=10.0, minimum-scale=0.86">
+    <title>Plataforma de estudo - RUPUS</title>
+    <script>
+        let userData = localStorage.getItem("userData")
+        userData = JSON.parse(userData)
+
+        if (userData === null) {
+            //validar jwt e redirecionar pro login
+            window.location.href = 'login.html';
+        }
+    </script>
+    <link rel="stylesheet" href="./assets/css/platform.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <script src="./assets/js/config.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="profileName">
+            <h5 id="profileName">Jorge Carreteiro</h5>
+        </div>
+        <div class="profileAchievements">
+            <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0 1.89309L1.37054 0.5L6.5 5.71383L11.6295 0.5L13 1.89309L6.5 8.5L0 1.89309Z" fill="white" />
+            </svg>
+        </div>
+        <div class="hoverProfile">
+            <img src="./assets/img/detailHoverProfile.svg" alt="detalhe" class="hoverDetail">
+            <div class="modulesSign">
+            </div>
+            <p id="completeModules">1/3 módulos concluídos</p>
+            <p onclick="localStorage.userData = null; window.location.href = 'login.html'">Sair</p>
+        </div>
+    </header>
+
+    <section class="contentSection">
+
+    </section>
+
+    <div class="form">
+        <form id="formQuestion" onsubmit="validateForm(this);return false;">
+        </form>
+    </div>
+    <script src="./assets/js/moduleHooks.js"></script>
+    <script src="./assets/js/platform.js"></script>
+
+    <script>
+        if (userData !== null) {
+            document.querySelector('#profileName').innerHTML = userData.name;
+        }
+
+    </script>
+
+</body>
+
+</html>

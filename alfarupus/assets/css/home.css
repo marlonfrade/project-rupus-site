@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    width: 100%;
+}
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* :focus {
+    outline: none;
+}
+
+h1 , h2 , h3 , h4 , h5 {
+    font-weight: medium;
+    line-height: 150%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+
+:root {
+
+    --red: #AF0E0E;
+    --black: #2C2C2C;
+
+    --alpha-modal : rgb(0, 0, 0, 0.7);
+
+}
+
+
+
+/*----------------
+COMPONENTS
+----------------*/
+label {
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+}
+
+
+label > p {
+    position: absolute;
+    font-weight: 600;
+    color: var(--red);
+    padding: 0 4px;
+    background: white;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 12px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+input[type=password] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 12px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+
+button {
+    border: none;
+    border-radius: 2px;
+}
+
+button[type=submit] {
+    width: 100%;
+    color: white;
+    padding: 16px 32px;
+    background: var(--red);
+}
+
+
+
+/*----------------
+MAIN CONTENT
+----------------*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    padding: 180px 11vw 130px 11vw;
+    background-image: url('../img/bgHome.png');
+    background-size: cover;
+}
+
+.textMain h5 {
+    font-weight: 500;
+    margin-top: 32px;
+    width: 48%;
+    opacity: .8;
+}
+
+
+/*----------------
+TEXTS CONTENT
+----------------*/
+.textsContent {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 11vw 120px;
+    width: 100%;
+}
+
+
+
+.block1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    height: auto;
+}
+
+.block1 > h4 {
+    width: 40%;
+    font-size: 26px;
+}
+
+.block1 > p {
+    width: 50%;
+    padding: 32px;
+    color: rgba(44, 44, 44, 0.8);
+    background-color: #FAFAFA;
+    border-radius: 2px;
+}
+
+
+
+.block2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    height: auto;
+}
+
+.block2 h3 {
+    color: var(--red);
+}
+
+.iconsBlock2 {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.cardBlock2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cardBlock2 img {
+    transition: 600ms;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 0px 12px rgba(175, 14, 14, 0.3);
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+.cardBlock2 img:hover {
+    box-shadow: 0px 0px 12px rgba(175, 14, 14, 0.8);
+}
+
+
+
+.block2-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.block2-2 h3 {
+    color: var(--red);
+}
+
+.iconsBlock2-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.iconsBlock2-2 img {
+    width: fit-content;
+}
+
+.cardBlock2-2 img {
+    width: 100%;
+}
+
+.cardBlock2-2 {
+    margin: 32px 0;
+    width: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardBlock2-2 h5 {
+    transform: translateY(-21px);
+}
+
+.iconsBlock2-2 p {
+    opacity: .8;
+    width: 100%;
+    text-align: center;
+}
+
+.t1 {
+    padding: 32px;
+    color: rgba(44, 44, 44, 0.8);
+    background-color: #FAFAFA;
+    border-radius: 2px;
+}
+
+
+/*----------------
+FOOTER
+----------------*/
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 180px;
+}
+
+footer > button {
+    background-color: var(--red);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 32px 64px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer > button > img {
+    margin-right: 32px;
+}
+
+/*
+
+@media screen and (max-width: 1366px) {
+
+    main {
+        padding: 180px 6vw;
+    }
+
+    main > .AlfaMark {
+        left: 6vw;
+    }
+
+    .textsContent {
+        padding: 80px 6vw 120px;
+    }
+
+    .cardBlock2-2 {
+        width: 25vw;
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+
+    .textMain h5 {
+        width: 100%;
+    }
+
+    .AlfaMark img {
+        width: 60vw;
+    }
+
+
+
+    .block1 {
+        margin-bottom: 80px;
+        flex-direction: column;
+    }
+
+    .block1 > h4 {
+        width: 100%;
+    }
+
+    .block1 > p {
+        width: 100%;
+        margin-top: 32px;
+    }
+
+
+
+    .block2 {
+        margin-bottom: 48px;
+    }
+
+    .iconsBlock2 {
+        margin-top: 0;
+    }
+
+    .cardBlock2 {
+        margin: 32px 0;
+        width: 40%;
+    }
+
+
+    .title2nd {
+        margin-top: 32px;
+    }
+
+
+
+    .cardBlock2-2 {
+        width: 90%;
+    }
+
+
+    footer button {
+        width: 80vw;
+    }
+
+} */

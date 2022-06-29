@@ -1,0 +1,258 @@
+/*----------------
+HEADER
+----------------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 11vw;
+    background-color: var(--red);
+    color: white;
+    width: 100%;
+}
+
+.right {
+    background-color: green;
+}
+.wrong {
+    background-color: red;
+}
+
+.profileAchievements {
+    display: flex;
+    align-items: center;
+}
+
+.profileAchievements {
+    padding: 24px;
+}
+
+.hoverProfile {
+    transition: 600ms;
+    position: absolute;
+    opacity: 0;
+    user-select: none;
+    top: 60px;
+    right: calc( 11vw + 24px);
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 8px 0 8px 8px;
+    filter: drop-shadow(0px 0px 1px #0000007a);
+}
+
+.showHoverProfile {
+    opacity: 1;
+}
+
+.hoverDetail {
+    position: absolute;
+    top: -6px;
+    right: 0;
+}
+
+.hoverProfile p {
+    margin-top: 16px;
+    color: #2c2c2c;
+    opacity: .8;
+}
+
+.modulesSign img {
+    margin-right: 8px;
+    width: 24px;
+}
+
+.notViewed {
+    filter: saturate(0);
+    opacity: .5;
+}
+
+
+
+/*----------------
+MAIN CONTENT
+----------------*/
+.contentSection {
+    padding: 0 11vw 120px;
+    width: 100%;
+}
+
+.contentSection h2 {
+    color: var(--red);
+}
+
+.module {
+    margin-top: 80px;
+}
+
+.dropdownSingle {
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin: 32px 0;
+    height: auto;
+    transition: 600ms;
+}
+
+
+
+/* Class toggle to open card video */
+.dropdownHidden {
+    height: 91px;
+}
+
+.dropdownHidden > .titleDropdown > svg {
+    transform: rotate(180deg);
+}
+
+
+
+
+.titleDropdown {
+    border-radius: 4px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.titleDropdown > svg {
+    transition: 600ms;
+}
+
+.dropdownSingle iframe {
+    align-self: center;
+    margin: 0 32px 32px;
+}
+
+
+
+
+.buttonsLastChd {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+}
+
+.buttonsLastChd > * {
+    padding: 16px 64px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 0 16px;
+}
+
+.seePDF {
+    background-color: transparent;
+    border: 1px solid #2c2c2c;
+    color: #2c2c2c;
+}
+
+.goToForm {
+    background-color: #AF0E0E;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+
+.form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.form:before {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+    height: 90vh;
+    overflow-y: scroll;
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    top: 32px;
+    width: 80vw;
+    padding: 32px;
+    background: white;
+    z-index: 2;
+    border-radius: 4px;
+}
+
+.headerForm {
+    display: flex;
+    justify-content: space-between;
+    color: #AF0E0E;
+}
+
+.headerForm img {
+    padding: 8px;
+}
+
+.question {
+    margin-top: 32px;
+}
+
+.question label {
+    padding: 4px;
+    margin: 8px 0;
+    opacity: .8;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+label input {
+    margin-right: 8px;
+}
+
+.buttonForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonForm button {
+    padding: 16px 64px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #AF0E0E;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+
+
+@media screen and ( max-width: 600px ) {
+
+    .contentSection {
+        padding: 0 5vw 120px;
+    }
+
+
+    .dropdownSingle iframe {
+        width: auto;
+    }
+
+
+    header {
+        padding: 12px 0;
+    }
+
+    .hoverProfile {
+        right: 24px;
+    }
+
+}

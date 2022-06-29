@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/bgHome.png');
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* :focus {
+    outline: none;
+}
+
+h1 , h2 , h3 , h4 , h5 {
+    font-weight: medium;
+    line-height: 150%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+
+:root {
+
+    --red: #AF0E0E;
+    --black: #2C2C2C;
+
+    --alpha-modal : rgb(0, 0, 0, 0.7);
+
+}
+
+
+
+/*----------------
+COMPONENTS
+----------------*/
+label {
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+}
+
+
+label > p {
+    position: absolute;
+    font-weight: 600;
+    color: var(--red);
+    padding: 0 4px;
+    background: white;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 12px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+input[type=password] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 12px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+
+button {
+    border: none;
+    border-radius: 2px;
+}
+
+button[type=submit] {
+    width: 100%;
+    color: white;
+    padding: 16px 32px;
+    background: var(--red);
+}
+
+/*----------------
+LOGIN PANEL
+----------------*/
+.login {
+    display: flex;
+    padding: 64px;
+    background-color: white;
+    border-radius: 2px;
+    flex-direction: column;
+}
+
+.titleLogin p {
+    margin-top: 4px;
+    opacity: .5;
+}
+
+.inputsLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputsLogin button {
+    margin-top: 32px;
+}
+
+

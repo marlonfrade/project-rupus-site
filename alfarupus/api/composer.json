@@ -1,0 +1,13 @@
+{
+    "require": {
+        "erandir/plug-route": "^3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Models\\": "models/",
+            "Controller\\": "controller/",
+            "Core\\": "core/",
+            "Helpers\\": "helpers/"
+        }
+    }
+}

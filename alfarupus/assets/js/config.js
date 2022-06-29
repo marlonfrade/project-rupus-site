@@ -1,0 +1,1 @@
+const BASE_API = 'https://rupuslogistica.com.br/alfarupus/api';

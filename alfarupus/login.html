@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=10.0, minimum-scale=0.86">
+    <title>Login - RUPUS</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <script src="./assets/js/config.js"></script>
+    <script>
+        let userData = localStorage.getItem("userData")
+        userData = JSON.parse(userData)
+
+        if (userData !== null) {
+            //validar jwt e redirecionar pro login
+            window.location.href = 'platform.html';
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Login panel -->
+    <div class="login">
+
+        <div class="titleLogin">
+            <h4>
+                Bem vindo ao programa Alfa Rupus.
+            </h4>
+            <p>
+                Faça o login para continuar.
+            </p>
+        </div>
+
+        <div class="inputsLogin">
+
+            <label for="password">
+                <p>
+                    CPF
+                </p>
+                <input type="text" name="cpf" id="cpf">
+            </label>
+
+            <button type="submit" onclick="login()">
+                <h5>
+                    Entrar
+                </h5>
+            </button>
+
+            <p id="loginStatus" style="display: none; margin-top: 8px;"></p>
+        </div>
+    </div>
+
+    <script>
+        userData = JSON.parse(userData)
+
+        if (userData && userData.JWT.length > 10) {
+            //validar jwt e redirecionar pro home
+            window.location.href = 'index.html';
+        }
+
+        async function login() {
+
+            let cpf = document.querySelector('[name="cpf"]').value;
+
+            if (cpf.length > 9) {
+                const req = await fetch(`${BASE_API}/auth/signin`, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ cpf, device_id: '123465' })
+                });
+
+                const json = await req.json();
+                if (json.error == 0) {
+                    localStorage.setItem("userData", JSON.stringify(json.data));
+                    window.location.href = 'platform.html';
+                } else {
+                    let loginStatus = document.getElementById('loginStatus');
+                    loginStatus.innerHTML = json.error;
+                    loginStatus.style.display = 'block';
+                }
+                // console.log(json)
+            }else{
+                alert('Preencha o cpf para fazer login!')
+            }
+
+        }
+    </script>
+</body>
+
+</html>
